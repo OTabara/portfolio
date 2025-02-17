@@ -8,8 +8,8 @@ export default function Home() {
       {/* Section Head pour le SEO et les métadonnées */}
       <Head>
         <title>Mon Portfolio - Oumou Tabara DIALLO</title>
-        <meta name="description" content="Portfolio de Oumou Tabara DIALLO, développeuse passionnée par la création d'applications performantes et interactives avec React.js, Next.js, et Tailwind CSS." />
-        <meta name="keywords" content="développeuse, React.js, Next.js, Tailwind CSS, portfolio, Oumou Tabara DIALLO" />
+        <meta name="description" content="Portfolio de Oumou Tabara DIALLO, passionnée par le développement de logiciels et le développement web. Découvrez mes projets et mon parcours." />
+        <meta name="keywords" content="développeuse, développement logiciel, développement web, portfolio, Oumou Tabara DIALLO" />
         <meta name="author" content="Oumou Tabara DIALLO" />
       </Head>
 
@@ -19,25 +19,32 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           {/* Animation de la photo de profil */}
           <motion.div
-            className="relative w-100 h-50 md:w-80 md:h-60 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg"
+            className="relative w-50 h-60 md:w-[150px] md:h-[100px] lg:w-[220px] lg:h-[300px] rounded-full overflow-hidden border-8 border-gray-300 shadow-xl"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <Image src="/sourire.jpg" alt="Photo de profil de Oumou Tabara DIALLO" layout="fill" objectFit="cover" />
+            <Image 
+              src="/sourire.jpg" 
+              alt="Photo de profil de Oumou Tabara DIALLO" 
+              width={250}
+              height={200}
+              className="object-cover w-full h-full"
+            />
           </motion.div>
 
           {/* Texte de présentation */}
           <motion.div
-            className="text-center md:text-left mt-6 md:mt-0"
+            className="text-center md:text-left mt-6 md:mt-0 w-full max-w-2xl"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-blue-600">Oumou Tabara DIALLO</h1>
             <p className="text-gray-600 mt-4 text-lg md:text-xl dark:text-gray-300">
-              Développeuse spécialisée en <strong>React.js, Next.js, et Tailwind CSS</strong>. 
-              Passionnée par la création d'interfaces modernes, performantes et intuitives.
+              Passionnée par le <strong>développement de logiciels</strong> et le <strong>développement web</strong>, 
+              je suis en pleine évolution pour maîtriser des technologies modernes comme <strong>React.js, Next.js, et Tailwind CSS</strong>. 
+              Mon objectif est de créer des solutions innovantes, performantes et intuitives.
             </p>
             {/* Bouton de téléchargement du CV */}
             <motion.a

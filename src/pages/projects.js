@@ -11,12 +11,12 @@ export default function Projects() {
     {
       title: "DreamPark - Système de Gestion de Parking",
       description: "Développement d’un système automatisé pour la gestion de parking en Python avec une conception modulaire.",
-      link: "https://github.com/tonprofil/dreampark",
+      // link: "https://github.com/tonprofil/dreampark",
     },
     {
       title: "QuizzGame - Application de Jeu de Quiz Culturel",
       description: "Création d’une application web interactive en JavaScript avec une interface utilisateur responsive en HTML/CSS.",
-      link: "https://github.com/tonprofil/quizzgame",
+      // link: "https://github.com/tonprofil/quizzgame",
     },
   ];
 
