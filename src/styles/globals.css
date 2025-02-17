@@ -14,8 +14,25 @@
   }
 }
 
+/* Mode clair par défaut */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Mode sombre */
+.dark body {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Adapter le footer
+.dark footer {
+  background-color: #111;
+} */
+
+/* Transitions pour les éléments interactifs */
+button, a, input, textarea {
+  transition: all 0.3s ease;
 }

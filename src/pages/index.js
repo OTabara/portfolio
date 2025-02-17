@@ -1,114 +1,117 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      {/* Section Head pour le SEO et les métadonnées */}
+      <Head>
+        <title>Mon Portfolio - Oumou Tabara DIALLO</title>
+        <meta name="description" content="Portfolio de Oumou Tabara DIALLO, développeuse passionnée par la création d'applications performantes et interactives avec React.js, Next.js, et Tailwind CSS." />
+        <meta name="keywords" content="développeuse, React.js, Next.js, Tailwind CSS, portfolio, Oumou Tabara DIALLO" />
+        <meta name="author" content="Oumou Tabara DIALLO" />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      {/* Section principale du contenu */}
+      <main className="container mx-auto px-4 py-20 text-center">
+        {/* Section de présentation avec photo de profil et texte */}
+        <div className="flex flex-col md:flex-row items-center md:space-x-12">
+          {/* Animation de la photo de profil */}
+          <motion.div
+            className="relative w-100 h-50 md:w-80 md:h-60 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Image src="/sourire.jpg" alt="Photo de profil de Oumou Tabara DIALLO" layout="fill" objectFit="cover" />
+          </motion.div>
+
+          {/* Texte de présentation */}
+          <motion.div
+            className="text-center md:text-left mt-6 md:mt-0"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            Read our docs
-          </a>
+            <h1 className="text-4xl md:text-6xl font-bold text-blue-600">Oumou Tabara DIALLO</h1>
+            <p className="text-gray-600 mt-4 text-lg md:text-xl dark:text-gray-300">
+              Développeuse spécialisée en <strong>React.js, Next.js, et Tailwind CSS</strong>. 
+              Passionnée par la création d'interfaces modernes, performantes et intuitives.
+            </p>
+            {/* Bouton de téléchargement du CV */}
+            <motion.a
+              href="/cv.pdf"
+              download
+              className="mt-6 inline-block bg-blue-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-blue-700 transition"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Télécharger mon CV 📄
+            </motion.a>
+          </motion.div>
         </div>
+
+        {/* Section des icônes animées */}
+        <motion.div
+          className="mt-12 flex justify-center space-x-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <motion.div whileHover={{ scale: 1.2, rotate: 10 }} className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center shadow-md">
+            <span className="text-2xl">💻</span>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.2, rotate: -10 }} className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center shadow-md">
+            <span className="text-2xl">🚀</span>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.2, rotate: 10 }} className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center shadow-md">
+            <span className="text-2xl">🎨</span>
+          </motion.div>
+        </motion.div>
+
+        {/* Section "Pourquoi travailler avec moi ?" */}
+        <motion.div
+          className="mt-20 bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-md"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center">Pourquoi travailler avec moi ?</h2>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            {/* Carte 1 : Dynamique et Innovante */}
+            <motion.div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md" whileHover={{ scale: 1.05 }}>
+              <h3 className="text-xl font-semibold text-blue-600">💡 Dynamique et Innovante</h3>
+              <p className="text-gray-600 dark:text-gray-300 mt-2">
+                Expérience académique en <strong>Next.js, React.js, HTML</strong>.
+              </p>
+            </motion.div>
+
+            {/* Carte 2 : Capacité d'Adaptation */}
+            <motion.div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md" whileHover={{ scale: 1.05 }}>
+              <h3 className="text-xl font-semibold text-blue-600">🎯 Capacité d'Adaptation</h3>
+              <p className="text-gray-600 dark:text-gray-300 mt-2">
+                Mes diverses expériences professionnelles témoignent de ma capacité à apprendre rapidement et à m'adapter à différents environnements.
+              </p>
+            </motion.div>
+
+            {/* Carte 3 : Créativité et Conception */}
+            <motion.div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md" whileHover={{ scale: 1.05 }}>
+              <h3 className="text-xl font-semibold text-blue-600">✨ Créativité et Conception</h3>
+              <p className="text-gray-600 dark:text-gray-300 mt-2">
+                Passionnée par la conception d'interfaces innovantes et interactives, je veille à offrir des expériences utilisateurs engageantes.
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Bouton pour voir les projets */}
+        <motion.div className="mt-12" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.6 }}>
+          <motion.a href="/projects" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-blue-700 transition" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            Voir mes projets
+          </motion.a>
+        </motion.div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
