@@ -11,7 +11,7 @@ export default function Projects() {
     {
       title: "DreamPark - Système de Gestion de Parking",
       description: "Développement d’un système automatisé pour la gestion de parking en Python avec une conception modulaire.",
-      // link: "https://github.com/tonprofil/dreampark",
+      link: "https://github.com/OTabara/DreamPark.git",
     },
     {
       title: "QuizzGame - Application de Jeu de Quiz Culturel",
