@@ -30,12 +30,19 @@ export default function About() {
       >
         <h1 className="text-4xl md:text-6xl font-bold text-center text-blue-600">À propos de moi</h1>
         <p className="text-lg text-gray-700 dark:text-gray-300 mt-4 leading-relaxed">
-          Je suis <strong>Oumou Tabara DIALLO</strong>, étudiante en <strong>Licence 3 MIASHS</strong> à l’Université Jean Jaurès Toulouse.
-          Passionnée par le développement logiciel, j’ai acquis des compétences en <strong>Java (Spring Boot), Python, C++, React.js, et PostgreSQL</strong>.
+          Je suis <strong>Oumou Tabara DIALLO</strong>, étudiante en <strong>Master 1 MIAGE – spécialité Données</strong> à l’Université Toulouse Capitole. 
+          Cette année, mon parcours me permettra d’acquérir des compétences clés en <strong>Business Intelligence</strong>, 
+          notamment en <strong>Power BI, Talend, SQL et gestion de bases de données</strong>.
         </p>
         <p className="text-lg text-gray-700 dark:text-gray-300 mt-4 leading-relaxed">
-          J’aime concevoir des applications performantes et optimiser les systèmes. Je suis actuellement à la recherche d’un stage dans le domaine du développement logiciel.
+          J’ai déjà une expérience en <strong>développement logiciel</strong> avec des projets réalisés en <strong>Java (Spring Boot), Python, C++, React.js et PostgreSQL</strong>. 
+          Cette double compétence me permet d’aborder aussi bien les aspects <strong>développement</strong> que <strong>données</strong>.
         </p>
+        <p className="text-lg text-gray-700 dark:text-gray-300 mt-4 leading-relaxed">
+          Actuellement, je suis à la recherche d’une <strong>alternance</strong> dans le domaine de la <strong>Business Intelligence</strong>, 
+          où je pourrai mettre en pratique mes acquis, développer mon expertise et contribuer à des projets de valorisation des données.
+        </p>
+
         
         {/* Bouton vers les projets avec animation */}
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="mt-8">
