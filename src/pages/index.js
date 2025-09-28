@@ -49,7 +49,7 @@ export default function Home() {
 
             {/* Bouton de téléchargement du CV */}
             <motion.a
-              href="/cv.pdf"
+              href="/CV_BI.pdf"
               download
               className="mt-6 inline-block bg-blue-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-blue-700 transition"
               whileHover={{ scale: 1.05 }}
