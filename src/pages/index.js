@@ -42,10 +42,11 @@ export default function Home() {
           >
             <h1 className="text-4xl md:text-6xl font-bold text-blue-600">Oumou Tabara DIALLO</h1>
             <p className="text-gray-600 mt-4 text-lg md:text-xl dark:text-gray-300">
-              Passionnée par le <strong>développement de logiciels</strong> et le <strong>développement web</strong>, 
-              je suis en pleine évolution pour maîtriser des technologies modernes comme <strong>React.js, Next.js, et Tailwind CSS</strong>. 
-              Mon objectif est de créer des solutions innovantes, performantes et intuitives.
+              Passionnée par la <strong>Business Intelligence</strong> et l’<strong>analyse de données</strong>, 
+              je suis en pleine évolution pour maîtriser des outils essentiels comme <strong>Power BI, Talend, SQL et la gestion de bases de données</strong>. 
+              Mon objectif est de transformer les données en <strong>informations stratégiques</strong> et de concevoir des solutions innovantes et performantes.
             </p>
+
             {/* Bouton de téléchargement du CV */}
             <motion.a
               href="/cv.pdf"
@@ -86,32 +87,32 @@ export default function Home() {
         >
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center">Pourquoi travailler avec moi ?</h2>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            {/* Carte 1 : Dynamique et Innovante */}
+            {/* Carte 1 : Expertise en Données */}
             <motion.div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md" whileHover={{ scale: 1.05 }}>
-              <h3 className="text-xl font-semibold text-blue-600">💡 Dynamique et Innovante</h3>
+              <h3 className="text-xl font-semibold text-blue-600">💡 Expertise en Données</h3>
               <p className="text-gray-600 dark:text-gray-300 mt-2">
-                Expérience académique en <strong>Next.js, React.js, HTML</strong>.
+                Capacité à modéliser, analyser et transformer les données en <strong>indicateurs stratégiques</strong> pour soutenir la décision.
+              </p>
+            </motion.div>
+            
+            {/* Carte 2 : Adaptabilité et Apprentissage Rapide */}
+            <motion.div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md" whileHover={{ scale: 1.05 }}>
+              <h3 className="text-xl font-semibold text-blue-600">🎯 Adaptabilité & Apprentissage</h3>
+              <p className="text-gray-600 dark:text-gray-300 mt-2">
+                Apte à assimiler rapidement de nouvelles technologies et méthodes pour rester à la pointe des pratiques BI.
+              </p>
+            </motion.div>
+            
+            {/* Carte 3 : Communication et Impact */}
+            <motion.div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md" whileHover={{ scale: 1.05 }}>
+              <h3 className="text-xl font-semibold text-blue-600">📊 Communication & Impact</h3>
+              <p className="text-gray-600 dark:text-gray-300 mt-2">
+                Capacité à présenter des analyses claires et actionnables, facilitant la collaboration et la prise de décision.
               </p>
             </motion.div>
 
-            {/* Carte 2 : Capacité d'Adaptation */}
-            <motion.div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md" whileHover={{ scale: 1.05 }}>
-              <h3 className="text-xl font-semibold text-blue-600">🎯 Capacité d'Adaptation</h3>
-              <p className="text-gray-600 dark:text-gray-300 mt-2">
-                Mes diverses expériences professionnelles témoignent de ma capacité à apprendre rapidement et à m'adapter à différents environnements.
-              </p>
-            </motion.div>
-
-            {/* Carte 3 : Créativité et Conception */}
-            <motion.div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md" whileHover={{ scale: 1.05 }}>
-              <h3 className="text-xl font-semibold text-blue-600">✨ Créativité et Conception</h3>
-              <p className="text-gray-600 dark:text-gray-300 mt-2">
-                Passionnée par la conception d'interfaces innovantes et interactives, je veille à offrir des expériences utilisateurs engageantes.
-              </p>
-            </motion.div>
           </div>
         </motion.div>
-
         {/* Bouton pour voir les projets */}
         <motion.div className="mt-12" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.6 }}>
           <motion.a href="/projects" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-blue-700 transition" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
